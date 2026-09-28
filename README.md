@@ -1,72 +1,87 @@
-# BTech Student Record System
+# B.Tech Student Record System
 
 ## 1. Project Overview
 
-The **BTech Student Record System** is a simple Python-based application
-designed to store and manage student information. It helps users add,
-view, search, update, and delete student records in an organized way.
+The **B.Tech Student Record System** is a simple, menu-driven Python
+program that accepts a student's roll number, name, and marks in four
+subjects. It calculates the total marks, percentage, and final grade,
+then displays a report card and a simple next-semester performance
+forecast.
 
-This project is suitable for a first-year BTech student and demonstrates
-basic programming concepts such as functions, conditional statements,
-loops, and file handling.
+The project is divided into two Python files: `main.py` handles the
+menu, input, and report card, while `helper.py` contains the `Student`
+class and the functions used for grade calculation and forecasting.
 
 ## 2. Features
 
--   Add new student records.
--   View all stored student records.
--   Search for a student using their roll number.
--   Update existing student details.
--   Delete a student record.
--   Store records in a CSV file so they can be accessed later.
--   Display a message when an operation is completed.
+-   Enter a student's roll number and name.
+-   Enter marks out of 100 for Maths, Physics, Python Programming, and
+    Basic Electrical.
+-   Store the entered marks in a Python integer array during program
+    execution.
+-   Display the student's details and marks in a report-card format.
+-   Calculate and display total marks and percentage.
+-   Assign a grade based on the percentage:
+    -   90% and above: A+
+    -   75% to below 90%: A
+    -   60% to below 75%: B
+    -   40% to below 60%: C
+    -   Below 40%: Fail
+-   Display a simple next-semester performance forecast based on the
+    percentage.
+-   Provide a menu option to enter another student's details or exit the
+    program.
 
 ## 3. Technologies and Tools Used
 
 -   **Programming Language:** Python 3
--   **Storage:** CSV file
--   **Editor/IDE:** Python IDLE or Visual Studio Code
--   **Version Control:** Git and GitHub
+-   **Python concepts:** variables, strings, input/output, type
+    conversion, operators, lists, loops, conditional statements,
+    functions, modules, arrays, and object-oriented programming
+-   **Files:** `main.py` and `helper.py`
+-   **IDE/Editor:** Python IDLE or Visual Studio Code
 
-## 4. Installation and Running the Project
+No external Python packages are required.
 
-### Prerequisites
+## 4. Steps to Install and Run the Project
 
--   Install Python 3 on your computer.
--   Download or clone this project to your computer.
+1.  Make sure Python 3 is installed on your computer.
 
-### Steps
+2.  Keep `main.py` and `helper.py` in the same folder.
 
-1.  Open the project folder in your code editor or terminal.
+3.  Open a terminal or command prompt in that folder.
 
-2.  Make sure Python 3 is installed by running:
-
-    ``` bash
-    python --3.14.7
-    ```
-
-3.  Run the main program:
+4.  Run the following command:
 
     ``` bash
     python main.py
     ```
 
-4.  Follow the menu displayed in the terminal to manage student records.
+5.  Choose **1** to enter student details and marks, or **2** to exit.
 
-> Note: The commands above assume the main Python file is named
-> `main.py`. Change the filename if your project uses a different name.
+6.  Follow the prompts to enter the roll number, name, and marks for all
+    four subjects.
+
+If your system uses the `python3` command, run `python3 main.py`
+instead.
 
 ## 5. Instructions for Testing
 
-You can test the application by performing the following steps:
+1.  Run `main.py`.
+2.  Select option **1** from the menu.
+3.  Enter a roll number and student name.
+4.  Enter marks for all four subjects when prompted.
+5.  Check that the report card displays the entered details, marks,
+    total, percentage, and grade.
+6.  Test different marks to check the grade categories (A+, A, B, C, and
+    Fail).
+7.  Check the forecast message for percentages both below and at/above
+    75%.
+8.  Select option **1** again to enter another set of details, or option
+    **2** to exit.
+9.  Enter an invalid menu choice and check that the program displays its
+    invalid-choice message.
 
-1.  Run the program.
-2.  Add a student record with a roll number, name, branch, and semester.
-3.  View all records and check that the new student appears.
-4.  Search for the student using the roll number.
-5.  Update one of the student's details and verify the change.
-6.  Delete the student record and confirm that it no longer appears.
-7.  Restart the program and check that saved records are still
-    available.
-
-Test with both valid and invalid inputs, such as searching for a roll
-number that does not exist.
+**Note:** The current program displays the entered student's report
+during the running session. It does not save records to a CSV file or
+database, so the details are not retained after the program closes.
